@@ -14,7 +14,9 @@ class RouterTest extends TestCase {
         public function test_router1() {
             $router = new Router();
             $html = $router->route( "http://localhost" );
-            $pos= mb_strpos($html, "Посетите наш12312321321 магазин");
+            $pos= mb_strpos($html, "Посетите наш12312321321 regrhaetgh магазин");
+            if ($pos===false)
+                $pos= -1;
             $this->assertNotFalse( $pos>=0);
         }
         public function test_router3() {
